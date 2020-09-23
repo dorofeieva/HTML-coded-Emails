@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Email Base</title>
     <style>
-        /* CLIENT-SPECIFIC STYLES */
+
         /* RESET STYLES */
         @media screen and (max-width:600px) {
             img[class="responsive-img"] {
@@ -14,7 +14,7 @@
                 height: auto;
             }
             table {
-                width: 100%;
+                width: 100% !important;
             }
         }
         @media screen and (max-width:400px) {
@@ -29,9 +29,9 @@
     <!-- Full width container -->
     <table id="wraper" role="presentation" width="100%" cellspacing="0" cellpading="0" border="0">
         
-        <tr bgcolor="#F9F9F9">
+        <tr id="header-line" bgcolor="#F9F9F9">
             <td>
-                <table id="header-line" width="600" style="margin: 0 auto; height: 30px">
+                <table width="600" style="margin: 0 auto; height: 30px">
                     <tr>
                         <td style="text-align:left"> <a href="#" style="color: #444; font-size:12px">Abonieren</a></td>
                         <td style="text-align:right"><a href="#" style="color: #444; font-size:12px">Online shoppen</a></td>
@@ -39,17 +39,17 @@
                 </table>
             </td>
         </tr>
-        <tr>
+        <tr id="email-content">
             <td align="center">
                 <!-- 600px container -->
                 <table id="all-sections" class="responsive-table" role="presentation" width="600" cellspacing="0" cellpading="0" border="0" style=" background-color: white; text-align: center">
-                    <tr>
-                        <td>&nbsp;</td>
-                    </tr>
-                    
-                    <tr id="main-content">
+
+                    <tr id="content">
                         <td>
                             <table id="intro" width="100%" cellspacing="0" cellpading="0" border="0" style=" font-family: Arial,Helvetica,sans-serif">
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
                                 <tr>
                                     <td>
                                         <img style="width:300px" src="https://ci6.googleusercontent.com/proxy/cdMyq6IDOlg26qyE6J5XTZyVQu6hlSt3fvlPS7MIkA4Xst-xSh8cwYvyY14dHJr9hdPWsEcXpFhdsDtSHVj30zHJz0j6UllDcaGyZw4z1aQs-gXBuDVoHO4=s0-d-e1-ft#https://n.westwing.de/imgproxy/img/2010416504/logo_ww_trx_20200427.png"/>
@@ -63,10 +63,8 @@
                                         <img class="responsive-img" style="width: 100%; padding:40px 0 20px 0" src="https://i.pinimg.com/originals/eb/c5/c8/ebc5c8c200870b94260a742959ca74fa.png"/>
                                     </td>
                                 </tr>
-                                
                             </table>
                             <table id="textcontent" width="400" class="responsive-table" style="text-align: center; margin: 0 auto">
-                                
                                 <tr>
                                     <td style="padding:10px">
                                         Schön, dass Sie bei Westwing sind!
@@ -92,38 +90,26 @@
                                         P.S.: Laden Sie gleich unsere kostenlose App herunter, um keine Sales zu verpassen!
                                     </td>
                                 </tr>
-
-                                <table id="app-icons" align="center" width="200" class="responsive-table" style="text-align: center;">
-                                        <tr>
-                                            <td style="padding: 10px">
-                                                <table width="100" align="center" cellspacing="0" cellpading="0" border="0">
-                                                        <tr>
-                                                            <td></td>
-                                                            <td width="100">
-                                                                <a href="#" alt="westwing-app"><img src="https://ci4.googleusercontent.com/proxy/14TsluTMVEk7uVeuSDb9-awtuJNOCGaSxO3wykakYTCDRI5dpgQxT6CRPsJl2TeKRcNl1-YqZ55s0ASfpri8rvAq6e50OJ8ivA=s0-d-e1-ft#http://n.westwing.de/imgproxy/img/2031656926/apple.png" alt="apple-logo"/>
-                                                                </a>
-                                                            </td>
-                                                            <td width="100">
-                                                                <a href="#" alt="westwing-app"><img src="https://ci6.googleusercontent.com/proxy/bc8-0v2omQpXIGhwF0TgAyorRjlqyGaE425WWyq6kop_qqUybRqAfTcxhuRbMdWGQLxs2zjxNeG2kdMkqTaTXVUIEB1FQkexOmgykNDTVA=s0-d-e1-ft#http://n.westwing.de/imgproxy/img/2031656927/google_play.png" alt="google-play-logo"/>
-                                                                </a>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                    </table>
-                                            </td>
-                                        </tr>
-                                        <tr style="text-align: center">
-                                            <td>
-                                                Herzliche Grüße,
-                                            </td>
-                                        </tr>
-                                        <tr style="text-align: center">
-                                            <td>
-                                                Westwing Team
-                                            </td>
-                                        </tr>
-                                    </table>
-                                
+                            </table>
+                            <table id="app-icons" align="center" width="200" class="responsive-table" style="text-align: center">
+                                <tr>
+                                    <td style="padding: 10px">
+                                        <table width="100" align="center" cellspacing="0" cellpading="0" border="0">
+                                            <tr>
+                                                <td></td>
+                                                <td width="100">
+                                                    <a href="#" alt="westwing-app"><img src="https://ci4.googleusercontent.com/proxy/14TsluTMVEk7uVeuSDb9-awtuJNOCGaSxO3wykakYTCDRI5dpgQxT6CRPsJl2TeKRcNl1-YqZ55s0ASfpri8rvAq6e50OJ8ivA=s0-d-e1-ft#http://n.westwing.de/imgproxy/img/2031656926/apple.png" alt="apple-logo"/>
+                                                    </a>
+                                                </td>
+                                                <td width="100">
+                                                    <a href="#" alt="westwing-app"><img src="https://ci6.googleusercontent.com/proxy/bc8-0v2omQpXIGhwF0TgAyorRjlqyGaE425WWyq6kop_qqUybRqAfTcxhuRbMdWGQLxs2zjxNeG2kdMkqTaTXVUIEB1FQkexOmgykNDTVA=s0-d-e1-ft#http://n.westwing.de/imgproxy/img/2031656927/google_play.png" alt="google-play-logo"/>
+                                                    </a>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
                                 <tr style="text-align: center">
                                     <td>
                                         Herzliche Grüße,
@@ -277,9 +263,9 @@
                             <hr style="background-color: #d6d6d6; height: 1px; border-width: 0; width: 80%">
                         </td>
                     </tr>
-                    <tr id="buttons">
+                    <tr id="footer">
                         <td>
-                            <table width="100%" cellspacing="12px" cellpading="0" border="0" style="background-color: white; text-align: center">
+                            <table id="buttons" width="100%" cellspacing="12px" cellpading="0" border="0" style="background-color: white; text-align: center">
                                 <tr width="200" style=" height:40px; font-weight: 600; color: #323232; font-family: 'Open Sans',Arial,Helvetica,sans-serif!important">
                                     <td style="border: solid 1px"><a href="#" style="color: #323232; text-decoration: none; text-transform: uppercase;" >Westwing</a></td>
                                     <td style="border: solid 1px"><a href="#" style="color: #323232; text-decoration: none; text-transform: uppercase;" >WestwingNow</a></td>
@@ -289,11 +275,7 @@
                                     <td style="border: solid 1px"><a href="#" style="color: #323232; text-decoration: none; text-transform: uppercase" >Interior Design Service</a> </td>
                                 </tr>
                             </table>
-                        </td>
-                    </tr>
-                    <tr id="footer">
-                        <td>
-                            <table width="600" cellspacing="0" cellpading="0" border="0" style="background-color: white; text-align: center">
+                            <table id="newsletter" width="600" cellspacing="0" cellpading="0" border="0" style="background-color: white; text-align: center">
                                 <tr width="200">
                                     <td>&nbsp;</td>
                                     <td id="footer-content" align="center" width="100%" style="font-size: 11px; color: #333333;">
@@ -317,10 +299,11 @@
                             <hr style="background-color: #d6d6d6; height: 1px; border-width: 0; width: 80%">
                         </td>
                     </tr>
+
                 </table> 
             </td>
         </tr>
-
+        
     </table>  
 </body>
 </html>
